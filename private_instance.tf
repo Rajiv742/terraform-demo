@@ -7,7 +7,7 @@ resource "aws_instance" "private_app_server" {
 #    associate_public_ip_address = "true"
 
    subnet_id     = aws_subnet.private_subnet[0].id
-   security_groups = [aws_security_group.default_sg.id]
+   security_groups = [aws_security_group.default_private_sg.id]
    
    user_data = <<-EOF
   #!/bin/bash
