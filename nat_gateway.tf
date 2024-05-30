@@ -5,6 +5,7 @@ resource "aws_nat_gateway" "demo_nat_gateway" {
 
   # Associating it in the Public Subnet!
   subnet_id = aws_subnet.public_subnet.id
+  
   tags = {
     Name = "Demo_Nat-Gateway"
   }

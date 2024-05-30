@@ -6,7 +6,7 @@ resource "aws_instance" "app_server_2" {
 
    associate_public_ip_address = "true"
 
-   subnet_id     = aws_subnet.public_subnet_2.id
+   subnet_id     = aws_subnet.public_subnet.id
    security_groups = [aws_security_group.default_sg.id]
    
    user_data = <<-EOF
