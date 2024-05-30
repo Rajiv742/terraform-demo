@@ -17,8 +17,8 @@ variable "public_subnet_2_cidr" {
 }
 variable "private_subnet_cidr" {
   description = "Value of the vpc cidr for the EC2 instance"
-  type        = list(string)
-  default     = ["10.0.3.0/24"]
+  type        = string
+  default     = "10.0.3.0/24"
 }
 
 variable "environment" {

@@ -15,6 +15,7 @@ resource "aws_instance" "app_server_2" {
   sudo apt update -y
   sudo apt install apache2 -y
   echo "*** Completed Installing apache2"
+  echo "Hello World from $(hostname -f)" > /var/www/html/index.html
   sudo systemctl start apache2
   echo "Starting apache2 server"
   EOF

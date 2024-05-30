@@ -7,7 +7,7 @@ resource "aws_route_table_association" "demo_nat_gateway_association" {
   ]
 
 #  Private Subnet ID for adding this route table to the DHCP server of Private subnet!
-  subnet_id      = aws_subnet.private_subnet[0].id
+  subnet_id      = aws_subnet.private_subnet.id
 
 # Route Table ID
   route_table_id = aws_route_table.nat_gateway_route_table.id
