@@ -21,7 +21,7 @@ resource "aws_instance" "app_server_2" {
 
    tags = {
        
-    Name        = "${var.environment}-${var.instance_name}"
+    Name        = "public-2-${var.environment}-${var.instance_name}"
     Environment = "${var.environment}"
    }
  }
